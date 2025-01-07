@@ -1,0 +1,217 @@
+.login_container {
+  height: 100vh;
+  width: 100%;
+  background: url('../../../public/images/Landschaft.jpg') center / cover fixed;
+  display: flex;
+}
+
+.login_left {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5rem;
+}
+
+.logo {
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 1rem;
+  right: 3rem;
+  z-index: 100;
+}
+
+.login_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding-left: 2rem;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.3);
+  font-variation-settings: 'wght' 700;
+}
+
+.login_right h1 {
+  padding: 0.5rem 0;
+  font-size: 2rem;
+}
+
+.login_right p {
+  padding: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.login_form {
+  position: relative;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 1rem 2rem 2rem;
+  border-radius: 5px;
+  width: clamp(50%, 100%, 500px);
+  height: auto;
+}
+
+.login_form fieldset {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 0;
+  border: none;
+}
+
+.login_form legend {
+  color: #1d172f;
+  font-size: 1.4rem;
+  font-variation-settings: 'wght' 750;
+  letter-spacing: 0.05rem;
+  padding-top: 1rem;
+}
+
+.login_form label {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.login_form input {
+  font-size: 1rem;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 0.3rem;
+}
+
+.login_form input:focus-visible {
+  outline: 2px solid #53183e;
+}
+
+.form_btns {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit_btn {
+  background: #1d172f;
+  color: #f2f2f2;
+  border: 1px solid #1d172f;
+  border-radius: 1000px;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.submit_btn:hover {
+  background: #53183e;
+  border-color: #53183e;
+}
+
+.switch_link {
+  margin-left: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 0.85rem;
+  text-underline-offset: 0.2rem;
+  color: #53183e;
+  letter-spacing: 0.05rem;
+}
+
+.switch_link:hover {
+  color: #1d172f;
+}
+
+small {
+  height: 1rem;
+  font-size: 0.9rem;
+}
+
+.small_text {
+  padding: 1rem;
+  padding-top: 0.5rem;
+}
+
+.small_error {
+  font-size: 0.8rem;
+  color: #a81616;
+  text-align: end;
+}
+
+.small_msg {}
+
+@media (max-width: 530px) {
+  .login_container {
+    display: block;
+  }
+
+  .login_form {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    z-index: 100;
+  }
+
+  .login_form legend {
+    padding-top: 2rem;
+  }
+
+  .login_left {
+    margin-left: 0;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    box-sizing: border-box;
+  }
+
+  .login_right {
+    display: none;
+  }
+}
+
+@media (min-width: 531px) and (max-width: 1000px) {
+  .login_container {
+    display: block;
+  }
+
+  .login_form {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  .logo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 100;
+  }
+
+  .login_left {
+    margin-left: 0;
+    width: 75%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+  }
+
+  .login_right {
+    display: none;
+  }
+}

@@ -8,12 +8,14 @@ const addNewUser = async (request, response) => {
   const user = request.body;
   const username = request.body.username;
   const password = request.body.password;
+  const email = request.body.email;
 
   if (!user || !username) {
     return response.status(400).json({ error: 'Bitte einen Benutzernamen angeben' });
   }
 
   const newUser = {
+    email: email,
     username: username,
     password: password,
     todos: [],
