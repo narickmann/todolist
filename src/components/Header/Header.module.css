@@ -1,0 +1,94 @@
+.header_container {
+  width: 100%;
+  height: 350px;
+  background: url('../../assets/images/Landschaft.jpg') center 65% / cover;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.header_content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+
+  width: 40%;
+  height: auto;
+  margin: auto;
+  padding: 2rem;
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.header_content h1,
+.header_content p {
+  margin: auto;
+  margin-bottom: 1rem;
+  font-variation-settings: 'wght' 650;
+}
+
+.addTodo_form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.addTodo_form input {
+  flex: 1 0 0;
+  font-size: 1rem;
+  padding: 2%;
+  border: 1px solid #666;
+  border-radius: 5px;
+}
+
+.addTodo_form input:focus-visible {
+  outline: 2px solid #53183e;
+}
+
+.addTodo_form button {
+  flex: 1 0 1;
+  width: 48px;
+  height: 48px;
+  background: #1d172f;
+  color: #f2f2f2;
+  border: 1px solid #1d172f;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.addTodo_form button:hover {
+  background: #53183e;
+  border-color: #53183e;
+}
+
+.addTodo_form button:active {
+  transform: translate(2px, 1px);
+}
+
+.add_icon {
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+}
+
+.message {
+  position: absolute;
+  bottom: -1rem;
+  left: 0;
+  z-index: 110;
+  
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  background: rgba(255, 255, 255, 0.4);
+  width: 100%;
+  color: #1d172f;
+}
+
+.message.error {
+  color: #a81616;
+}

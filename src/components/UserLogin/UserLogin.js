@@ -2,8 +2,12 @@ import styles from './UserLogin.module.css';
 
 import md5 from 'md5';
 import { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const UserLogin = () => {
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
@@ -38,6 +42,8 @@ const UserLogin = () => {
       }
 
       localStorage.setItem('username', username);
+      const redirectTo = location.state?.from?.pathname || "/";
+      navigate(redirectTo);
     } catch (error) {
       console.error('Fehler: ', error.message);
     }
@@ -83,6 +89,8 @@ const UserLogin = () => {
         localStorage.setItem('username', username);
         setRegisterMessage('Du hast dich erfolgreich registriert');
         setTimeout(() => setRegisterMessage(''), 2000);
+        const redirectTo = location.state?.from?.pathname || "/";
+        navigate(redirectTo);
       }
 
     } catch (error) {
